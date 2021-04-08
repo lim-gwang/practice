@@ -1,4 +1,18 @@
-window.addEventListener("load", function() {
+ //  debounce
+ function debounce(func, delay) {
+    var timer = null;
+    return function(...arg) {
+            clearInterval(func)
+            timer = setTimeout(func.bind(null, ...arg), delay)
+        }
+}
+// 여기서의 ...arg는 mouseTarget 매개변수의 event.target이 들어간다. 
+// 
+
+/*
+************* aside menu event *******************
+*/
+window.addEventListener("DOMContentLoaded", function() {
     var wrap = document.getElementById("wrap")
     var contentBody = document.getElementById("content") 
     var sideMenu = document.getElementById("sideNav")
@@ -6,17 +20,6 @@ window.addEventListener("load", function() {
 
     // mousemove
     document.addEventListener("mousemove", debounce(mouseTarget, 300))
-
-    //  debounce
-    function debounce(func, delay) {
-        var timer = null;
-        return function(...arg) {
-                clearInterval(func)
-                timer = setTimeout(func.bind(null, ...arg), delay)
-            }
-    }
-    // 여기서의 ...arg는 mouseTarget 매개변수의 event.target이 들어간다. 
-    // 
 
 
     // 사이드메뉴 영역에 들어가면 사이드메뉴 생성 및 콘텐츠 크기 조절
