@@ -9,6 +9,15 @@
 // 여기서의 ...arg는 mouseTarget 매개변수의 event.target이 들어간다. 
 // 
 
+//throttle 
+function throttle(func, delay) {
+    var timer = null 
+
+    return function(...arg) {
+        timer = setTimeout(func.bind(null, ...arg), delay)
+    }
+}
+
 /*
 ************* aside menu event *******************
 */
@@ -20,7 +29,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
     // mousemove
     document.addEventListener("mousemove", debounce(mouseTarget, 300))
-
 
     // 사이드메뉴 영역에 들어가면 사이드메뉴 생성 및 콘텐츠 크기 조절
     function mouseTarget(e) {
@@ -60,4 +68,15 @@ window.addEventListener("DOMContentLoaded", function() {
             contentBody.style.marginLeft = sideMenuWid + "px"
         }
     }
+
+
+
+    
+
+
+
 })
+
+
+
+
