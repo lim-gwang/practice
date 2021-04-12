@@ -46,6 +46,7 @@ textarea {
     top:0;
     width:100%;
     background:#fff;
+    z-index:99;
     box-shadow:1px 1px 5px rgba(0,0,0,0.3);
 }
 
@@ -93,6 +94,9 @@ textarea {
     overflow-y:auto;
     transition:all .3s;
 }
+#formItem {
+    padding-bottom:5rem;
+}
 .item {
     width:100%;
     padding:2rem;
@@ -114,6 +118,17 @@ textarea {
 }
 .item span {
     margin-top:3rem;
+}
+.item button.del {
+    width:7rem;
+    height:4rem;
+    background:red;
+    color:#fff;
+    text-align:center;
+    line-height:4rem;
+    position:absolute;
+    bottom:2rem;
+    right:2rem;
 }
 .item:last-child {
     margin-bottom:0;

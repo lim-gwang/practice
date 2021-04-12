@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", function() {
         var sideMenuWid = sideMenu.offsetWidth
 
         if (window.innerWidth <= 1024) {
-            sideMenu.style.display = "none"
+            sideMenu.style.display = "none" 
             contentBody.style.marginLeft = 0
 
         } else {
