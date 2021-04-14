@@ -16,7 +16,7 @@
 
 // 여기서의 ...arg는 mouseTarget 매개변수의 event.target이 들어간다. 
 // 
-
+// saddsadsa
 //throttle 
 function throttle(func, delay) {
     
